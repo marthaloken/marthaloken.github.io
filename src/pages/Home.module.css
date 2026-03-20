@@ -1,0 +1,230 @@
+/* ── Hero ─────────────────────────────────────────────────────── */
+.hero {
+  padding: 7rem 0 6rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.heroInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--page-padding);
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 var(--page-padding);
+}
+
+.heroEyebrow {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.heroHeading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.heroLead {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin-bottom: 2.5rem;
+  max-width: 540px;
+}
+
+.heroCtas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.75rem;
+  background: var(--color-text);
+  color: #fff;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  transition: opacity var(--transition);
+}
+
+.ctaPrimary:hover {
+  opacity: 0.8;
+}
+
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.75rem;
+  background: transparent;
+  color: var(--color-text);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.ctaSecondary:hover {
+  background: var(--color-accent-muted);
+  border-color: transparent;
+}
+
+/* ── About ─────────────────────────────────────────────────────── */
+.about {
+  padding: 6rem 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.sectionHeading {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 5rem;
+  align-items: start;
+}
+
+.aboutText {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.aboutText p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+}
+
+.aboutCta {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text);
+  transition: letter-spacing var(--transition);
+}
+
+.aboutCta:hover {
+  letter-spacing: 0.02em;
+}
+
+.aboutSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.infoBlock {
+  padding: 1.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.infoHeading {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+  margin-bottom: 1rem;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.infoTitle {
+  display: block;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.infoSub {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.125rem;
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill {
+  font-size: 0.8125rem;
+  padding: 0.25rem 0.75rem;
+  background: var(--color-accent-muted);
+  border-radius: 100px;
+  color: var(--color-text-secondary);
+}
+
+/* ── Featured ─────────────────────────────────────────────────── */
+.featured {
+  padding: 6rem 0;
+}
+
+.featuredHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.viewAll {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text);
+  transition: letter-spacing var(--transition);
+}
+
+.viewAll:hover {
+  letter-spacing: 0.02em;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero {
+    padding: 4rem 0;
+  }
+
+  .projectGrid {
+    grid-template-columns: 1fr;
+  }
+}

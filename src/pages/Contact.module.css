@@ -1,0 +1,247 @@
+.page {
+  padding: 5rem 0 7rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+/* ── Info column ────────────────────────────────────────────── */
+.info {
+  position: sticky;
+  top: 5rem;
+}
+
+.eyebrow {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.lead {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+  margin-bottom: 2.5rem;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.75rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contactLabel {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+}
+
+.contactValue {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  transition: color var(--transition);
+}
+
+a.contactValue:hover {
+  color: var(--color-text);
+}
+
+/* ── Form ───────────────────────────────────────────────────── */
+.formWrapper {
+  padding: 2.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 0.9375rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  appearance: none;
+  resize: none;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-text);
+  box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.08);
+}
+
+.inputError {
+  border-color: #d03030;
+}
+
+.inputError:focus {
+  box-shadow: 0 0 0 3px rgba(208, 48, 48, 0.1);
+}
+
+.textarea {
+  line-height: 1.6;
+}
+
+.error {
+  font-size: 0.8125rem;
+  color: #d03030;
+}
+
+.formError {
+  font-size: 0.875rem;
+  color: #d03030;
+  padding: 0.75rem 1rem;
+  background: #fff1f1;
+  border-radius: var(--radius-sm);
+}
+
+.submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2rem;
+  background: var(--color-text);
+  color: #fff;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: opacity var(--transition);
+  align-self: flex-start;
+}
+
+.submit:hover:not(:disabled) {
+  opacity: 0.8;
+}
+
+.submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Success state ──────────────────────────────────────────── */
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  gap: 1rem;
+}
+
+.successIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-accent-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.successHeading {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+.successBody {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+}
+
+.resetButton {
+  margin-top: 0.5rem;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+
+.resetButton:hover {
+  background: var(--color-accent-muted);
+  color: var(--color-text);
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .info {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 3rem 0 5rem;
+  }
+
+  .formWrapper {
+    padding: 1.5rem;
+  }
+}
